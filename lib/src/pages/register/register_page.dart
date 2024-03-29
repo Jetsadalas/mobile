@@ -30,10 +30,6 @@ class _RegisterPageState extends State<RegisterPage> {
                 decoration: InputDecoration(labelText: 'Surname'),
               ),
               TextFormField(
-                decoration: InputDecoration(labelText: 'Birthday'),
-                keyboardType: TextInputType.datetime,
-              ),
-              TextFormField(
                 decoration: InputDecoration(labelText: 'Age'),
                 keyboardType: TextInputType.number,
               ),
