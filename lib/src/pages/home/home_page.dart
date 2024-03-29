@@ -1,3 +1,4 @@
+import 'package:appmath/src/pages/home/calculetor/calculate_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -47,7 +48,10 @@ class HomePage extends StatelessWidget {
                       iconSize: 22.0 * 1.7,
                       icon: Icon(Icons.calculate),
                       onPressed: () {
+                        
                         // การทำงานเมื่อคลิกปุ่มเลขาคณิต
+                        MaterialPageRoute materialPageRoute = MaterialPageRoute(builder: (BuildContext context) => CalculatorApp());
+                        Navigator.of(context).push(materialPageRoute);
                       },
                     ),
                     IconButton(
@@ -82,3 +86,34 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+
+
+  // Define a function to calculate the result
+void _calculateResult() {
+  // Perform the calculation here
+  // For example, let's assume the result is 100
+  final result = 100;
+
+  // Show the result in a dialog
+  var context;
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        title: const Text('Result'),
+        content: Text('The result is $result'),
+        actions: <Widget>[
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            child: const Text('Close'),
+          ),
+        ],
+      );
+    },
+  );
+}
+
+
