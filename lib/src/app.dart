@@ -11,9 +11,9 @@ class appmath extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "appmath",
+      //title: "appmath",
       routes: AppRoute.all,
-      home: LoginPage(),
+      home: HomePage(),
     );
   }
 }
